@@ -1,7 +1,7 @@
-function calc() {
-  return true;
+function add(number) {
+  return number;
 }
 
 module.exports = {
-    calc
+    add
 }
