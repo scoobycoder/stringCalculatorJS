@@ -1,5 +1,11 @@
 function add(numbers) {
-  return numbers.split(',').reduce(getSum);
+  let numbs = numberToArray(numbers);
+
+  return numbs.reduce(getSum);
+}
+
+function numberToArray(numbers) {
+  return numbers.split('\n').toString().split(',');
 }
 
 function getSum(total, num) {
