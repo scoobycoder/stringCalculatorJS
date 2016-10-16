@@ -1,7 +1,5 @@
 function add(numbers) {
-  let numbs = numberToArray(numbers);
-
-  return numbs.reduce(getSum);
+  return numberToArray(numbers).reduce(getSum);
 }
 
 function numberToArray(numbers) {
