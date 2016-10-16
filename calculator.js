@@ -1,5 +1,9 @@
-function add(number) {
-  return number;
+function add(numbers) {
+  return numbers.reduce(getSum);
+}
+
+function getSum(total, num) {
+   return parseInt(total) + parseInt(num);
 }
 
 module.exports = {
