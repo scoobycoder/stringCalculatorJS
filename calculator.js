@@ -1,5 +1,5 @@
 function add(numbers) {
-  return numbers.reduce(getSum);
+  return numbers.split(',').reduce(getSum);
 }
 
 function getSum(total, num) {
