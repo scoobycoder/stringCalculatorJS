@@ -1,8 +1,8 @@
-const add = (numbers) => (numberToArray(numbers).reduce(getSum));
+const add = (numbers) => (numberToArray(numbers)
+    .reduce((total, num) => (parseInt(total) + parseInt(num))));
 
 const numberToArray = (numbers) => (numbers.split('\n').toString().split(','));
 
-const getSum = (total, num) => (parseInt(total) + parseInt(num));
 
 module.exports = {
     add
