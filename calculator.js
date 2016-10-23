@@ -1,14 +1,8 @@
-function add(numbers) {
-  return numberToArray(numbers).reduce(getSum);
-}
+const add = (numbers) => (numberToArray(numbers).reduce(getSum));
 
-function numberToArray(numbers) {
-  return numbers.split('\n').toString().split(',');
-}
+const numberToArray = (numbers) => (numbers.split('\n').toString().split(','));
 
-function getSum(total, num) {
-   return parseInt(total) + parseInt(num);
-}
+const getSum = (total, num) => (parseInt(total) + parseInt(num));
 
 module.exports = {
     add
