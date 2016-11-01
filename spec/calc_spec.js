@@ -5,13 +5,13 @@ var assert = chai.assert;
 var calculator = require ("../calculator")
 
 describe('String Calculator', function(){
-    xit('should take string numbers and return them', function(done) {
+    it('should take string numbers and return them', function(done) {
       let numbers = '1';
       assert.equal(calculator.add(numbers), "1", 'should take string numbers and return them');
       done();
     })
 
-    xit('should take multiple string numbers and add them', function(done) {
+    it('should take multiple string numbers and add them', function(done) {
       let numbers = '1,2';
       assert.equal(calculator.add(numbers), 3, 'should take multiple string numbers and add them');
       done();
