@@ -1,10 +1,9 @@
 const flatten = list => list
 const add = (numbers) => {
-  let delimiter = numbers.substr(numbers.indexOf('//') + 2, numbers.indexOf('//') + 1)
-  let newNumbers = numbers.replace('\n','')
-  newNumbers = newNumbers.replace('//','')
+  const delimiter = numbers.substr(numbers.indexOf('//') + 2, numbers.indexOf('//') + 1)
+  const newNumbers = numbers.replace('\n','').replace('//','')
 
-  let result = newNumbers.split(delimiter)
+  const result = newNumbers.split(delimiter)
     .filter(Boolean)
     .reduce((total, num) => parseInt(total) + parseInt(num))
 
