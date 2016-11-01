@@ -1,4 +1,3 @@
-const flatten = list => list
 const add = (numbers) => {
   const delimiter = numbers.substr(numbers.indexOf('//') + 2, numbers.indexOf('//') + 1)
   const newNumbers = numbers.replace('\n','').replace('//','')
