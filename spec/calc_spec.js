@@ -31,7 +31,7 @@ describe('String Calculator', function(){
 
     it('should throw exception when negative numbers passed to it', function(done) {
       let numbers = "//;\n-1"
-      assert.equal(calculator.add(numbers), 'negatives not allowed', 'should throw exception when negative numbers passed to it')
+      expect(calculator.add(numbers)).to.throw(Error, /bad function/)
       done()
     })
 

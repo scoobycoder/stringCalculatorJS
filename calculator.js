@@ -3,10 +3,10 @@ const removeCharacters = (numbers) => numbers.replace('\n','').replace('//','')
 
 function noNegativesAllowed(number) {
   if (number < 0) {
-    return 'negatives not allowed'
+    return new Error('negatives not allowed')
   }
   else {
-    return number;
+    return number
   }
 }
 
@@ -16,8 +16,9 @@ const add = (numbers) => {
       .filter(Boolean)
       .filter(noNegativesAllowed)
       .reduce((total, num) => parseInt(total) + parseInt(num))
-  } catch (ReferenceError) {
-    throw ReferenceError
+  } catch (Error) {
+    console.log(Error)
+    throw Error
   }
 }
 
