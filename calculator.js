@@ -1,5 +1,5 @@
-const getDelimiter = (numbers) => numbers.substr(numbers.indexOf('//') + 2, numbers.indexOf('//') + 1)
-const removeCharacters = (numbers) => numbers.replace('\n','').replace('//','')
+const getDelimiter = (numbers) => numbers.substr(numbers.indexOf('[') + 1, numbers.indexOf(']') - 3)
+const removeCharacters = (numbers) => numbers.replace('\n','').replace('//[','').replace(']','')
 const ignoreNumberOver1000 = (number) => number >= 1000 ? 0 : number
 
 const add = (numbers) => {
@@ -10,5 +10,6 @@ const add = (numbers) => {
 }
 
 module.exports = {
-    add
+    add,
+    getDelimiter
 }
