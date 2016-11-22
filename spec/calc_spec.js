@@ -29,5 +29,11 @@ describe('String Calculator', function(){
       done()
     })
 
+    it('should ignore numbers over 1000', function(done) {
+      let numbers = "//;\n1;2;1000"
+      assert.equal(calculator.add(numbers), 3, 'should ignore numbers over 1000')
+      done()
+    })
+
   }
 )
