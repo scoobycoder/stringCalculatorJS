@@ -52,5 +52,11 @@ describe('Get Delimiter', function(){
       done()
     })
 
+    it('should multiple of any length delmitters', function(done) {
+      let numbers = "//[*][%]\n1*2%3"
+      assert.equal(calculator.getDelimiter(numbers), ['*','%'], 'should handle any length delimiters')
+      done()
+    })
+
   }
 )
