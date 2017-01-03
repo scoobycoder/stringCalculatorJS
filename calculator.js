@@ -11,5 +11,6 @@ const add = (numbers) => {
 
 module.exports = {
     add,
-    getDelimiter
+    getDelimiter,
+    removeCharacters
 }
