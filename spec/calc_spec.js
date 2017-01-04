@@ -5,31 +5,31 @@ var assert = chai.assert
 var calculator = require ("../calculator")
 
 describe('String Calculator', function(){
-    xit('should take string numbers and return them', function(done) {
+    it('should take string numbers and return them', function(done) {
       let numbers = '1'
       assert.equal(calculator.add(numbers), "1", 'should take string numbers and return them')
       done()
     })
 
-    xit('should take multiple string numbers and add them', function(done) {
+    it('should take multiple string numbers and add them', function(done) {
       let numbers = '//[,]1,2'
       assert.equal(calculator.add(numbers), 3, 'should take multiple string numbers and add them')
       done()
     })
 
-    xit('should allow for new lines to seperate numbers as well as commas', function(done) {
+    it('should allow for new lines to seperate numbers as well as commas', function(done) {
       let numbers = "//[\n]1\n2\n3"
       assert.equal(calculator.add(numbers), 6, 'should allow for new lines to seperate numbers as well as commas')
       done()
     })
 
-    xit('should support different delimiters', function(done) {
+    it('should support different delimiters', function(done) {
       let numbers = "//[;]\n1;2"
       assert.equal(calculator.add(numbers), 3, 'should support different delimiters')
       done()
     })
 
-    xit('should ignore numbers over 1000', function(done) {
+    it('should ignore numbers over 1000', function(done) {
       let numbers = "//[;]\n1;2;1000"
       assert.equal(calculator.add(numbers), 3, 'should ignore numbers over 1000')
       done()
@@ -37,8 +37,6 @@ describe('String Calculator', function(){
 
     it('should handle any length delimiters', function(done) {
       let numbers = "//[***]\n1***2***3"
-      console.log(calculator.getDelimiter(numbers))
-      console.log(calculator.removeCharacters(numbers))
       assert.equal(calculator.add(numbers), 6, 'should handle any length delimiters')
       done()
     })
@@ -48,13 +46,13 @@ describe('String Calculator', function(){
 
 describe('Get Delimiter', function(){
 
-    it('should handle any length delimiters', function(done) {
+    xit('should handle any length delimiters', function(done) {
       let numbers = "//[***]\n1***2***3"
       assert.equal(calculator.getDelimiter(numbers), '***', 'should handle any length delimiters')
       done()
     })
 
-    it('should multiple of any length delmitters', function(done) {
+    xit('should multiple of any length delmitters', function(done) {
       let numbers = "//[*][%]\n1*2%3"
       assert.equal(calculator.getDelimiter(numbers), ['*','%'], 'should handle any length delimiters')
       done()
